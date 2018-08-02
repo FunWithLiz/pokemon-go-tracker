@@ -1,5 +1,5 @@
 module.exports = {
-    host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 5432,
-    database: process.env.DB_NAME || 'pokemon_db'
+    host: 'localhost',
+    port: 5432,
+    database: 'pokemon_db'
 }

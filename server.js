@@ -11,9 +11,9 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
-app.set('veiw engine', 'ejs');
+app.set('view engine', 'ejs');
 
 // require('./config/passport');
 

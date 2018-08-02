@@ -29,8 +29,8 @@ module.exports = {
     },
 
     addPokemon(req, res, next){
-        const { } = req.body;
-        db.save({ })
+        const { name, description } = req.body;
+        db.save({ name, description })
         .then((newPokemon) => {
             res.locals.data = newPokemon;
             next();
@@ -39,11 +39,11 @@ module.exports = {
     },
 
     updatePokemon(req, res, next){
-        const { } = req.body;
+        const { name, description } = req.body;
         const modifiedPokemon = {
             id: req.params.id,
-            
-            
+            name,
+            description,
         };
 
         db.update(modifiedPokemon)
