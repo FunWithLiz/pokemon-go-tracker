@@ -2,7 +2,8 @@ const db = require('../models/pokemon');
 
 module.exports = {
     createNewPokemon(req, res, next){
-        db.save({...req.body, creator_id: req.user.id})
+        console.log(req.users);
+        db.save({...req.body, users_id: 1})
         .then((pokemon)=>{
             res.redirect('/pokemon')
         })
@@ -13,7 +14,6 @@ module.exports = {
     showAllPokemon(req, res, next){
         db.findAllPokemon()
         .then((pokemon)=> {
-            console.log(pokemon)
             res.locals.data = pokemon;
             next();
         })

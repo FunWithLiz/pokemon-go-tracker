@@ -2,6 +2,7 @@ const logger = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const path = require('path');
 // const passport = require('passport');
 // const session = require('express-session');
 
@@ -15,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 // app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
-
+app.set('views', path.join(__dirname, 'views'));
 // require('./config/passport');
 app.use(methodOverride('__method'));
 app.use(logger('dev'));

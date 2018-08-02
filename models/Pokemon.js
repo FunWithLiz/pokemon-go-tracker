@@ -4,27 +4,15 @@ module.exports = {
     findAllPokemon(){
         console.log('Im in the model!');
         return db.many(`
-        SELECT 
-        p.id,
-        p.users_id,
-        p.description,
-        t.type AS type,
-        u.username AS creator
-      FROM pokemon p
-      LEFT JOIN pokemon_types x
-        ON (x.pokemon_id = p.id)
-      LEFT JOIN types t
-        ON (x.type_id = t.id)
-      LEFT JOIN users u
-        ON (u.id = p.users_id)
-      ORDER BY t.type`)
+        SELECT *
+        FROM pokemon`)
     },
 
     findById(id){
         return db.one(`
         SELECT
         p.id,
-        p.user_id,
+        p.users_id,
         p.description,
         t.type AS type,
         u.username AS creator
@@ -38,6 +26,8 @@ module.exports = {
     },
 
     save(pokemon){
+        console.log(pokemon)
+        debugger
         return db.one(`
         INSERT INTO pokemon (name)
         VALUES ($/name/)

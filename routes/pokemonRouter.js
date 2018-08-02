@@ -1,6 +1,7 @@
 const express = require('express');
 
 const pokemonController = require('../controllers/pokemonController');
+const viewsController = require('../controllers/viewsController');
 
 const pokemonRouter = express.Router();
 
@@ -18,7 +19,7 @@ pokemonRouter.route('/:id')
 
 pokemonRouter.route('/')
     .post(pokemonController.createNewPokemon)
-    .get(pokemonController.showAllPokemon);
+    .get(pokemonController.showAllPokemon, viewsController.showAll, viewsController.showAllPokemon);
 
 
 

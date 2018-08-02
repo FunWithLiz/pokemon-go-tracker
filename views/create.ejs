@@ -21,12 +21,17 @@
 
 <h1>Hi</h1>
 
-<% data.forEach(pokemon => {%>
-    <%=pokemon.name%>
-    <%})%>
 
-
-<form action="/pokemon" method="get">
-    <h2>Get pokemon</h2>
-    <button type="submit"><a href="showAllPokemon.ejs">Show</a></button>
+<form action="/pokemon" method="post">
+    <h2>New Pokemon</h2>
+    <label for="Pokemon">
+      Pokemon:
+      <input type="text" name="pokemon">
+    </label>
+    <label for="Type">
+      Description:
+      <textarea description="description" cols="30" rows="10">
+        </textarea>
+    </label>
+    <button type="submit">Create</button>
   </form>
