@@ -1,6 +1,7 @@
 const logger = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 // const passport = require('passport');
 // const session = require('express-session');
 
@@ -16,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
 // require('./config/passport');
-
+app.use(methodOverride('__method'));
 app.use(logger('dev'));
 
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -30,7 +31,7 @@ app.get('/', (req, res)=>{
 });
 
 app.listen(PORT, () => {
-    console.log(`listening on port ${PORT}, in ${app.get('env')}mode.`)
+    console.log(`listening on port ${PORT}, in ${app.get('env')} mode.`)
 })
 
 module.exports = { app };

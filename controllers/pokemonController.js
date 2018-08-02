@@ -13,6 +13,7 @@ module.exports = {
     showAllPokemon(req, res, next){
         db.findAllPokemon()
         .then((pokemon)=> {
+            console.log(pokemon)
             res.locals.data = pokemon;
             next();
         })

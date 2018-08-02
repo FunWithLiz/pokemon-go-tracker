@@ -2,9 +2,11 @@ const db = require('../config/conn');
 
 module.exports = {
     findAllPokemon(){
+        console.log('Im in the model!');
         return db.many(`
+        SELECT 
         p.id,
-        p.user_id,
+        p.users_id,
         p.description,
         t.type AS type,
         u.username AS creator
@@ -12,9 +14,9 @@ module.exports = {
       LEFT JOIN pokemon_types x
         ON (x.pokemon_id = p.id)
       LEFT JOIN types t
-        ON (x.types_id = t.id)
-      LEFT JOIN user u
-        ON (p.user_id = u.id)
+        ON (x.type_id = t.id)
+      LEFT JOIN users u
+        ON (u.id = p.users_id)
       ORDER BY t.type`)
     },
 
@@ -37,8 +39,8 @@ module.exports = {
 
     save(pokemon){
         return db.one(`
-        INSERT INTO pokemon (name, description, creator_id)
-        VALUES ($/name/, $/description/, $/creator_id/)
+        INSERT INTO pokemon (name)
+        VALUES ($/name/)
         RETURNING *
         `, pokemon);
     },
