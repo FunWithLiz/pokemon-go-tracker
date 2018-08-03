@@ -1,32 +1,11 @@
-<!-- <table>
-    <tr>
-        <th>Pokemon</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
 
-<tbody>
-    <tr>
-        <td><a href="https://cdn.bulbagarden.net/upload/2/21/001Bulbasaur.png">Bulbasaur</a></td>
-        <td>Grass</td>
-        <td>A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.</td>
-    </tr>
-
-    
-</tbody>
-
-</table> -->
 
 <%- include('partials/header') %>
 
-<h1>Hi</h1>
-
-<% data.forEach(pokemon => {%>
-    <%=pokemon.name%>
-    <%})%>
-
-
 <form action="/pokemon" method="get">
-    <h2>Get pokemon</h2>
-    <button type="submit"><a href="showAllPokemon.ejs">Show</a></button>
-  </form>
+    <h2>Get pokemon (You have to click it a couple of times)</h2>
+    <button type="submit"><a href="/pokemon">Show All the Pokemon</a></button>
+    
+</form>
+
+<%- include('partials/create') %>

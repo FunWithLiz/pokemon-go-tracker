@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use('/pokemon', pokemonRouter);
 
 app.get('/', (req, res)=>{
-    res.send(`hello world`);
+    res.render('pokemon_body');
 });
 
 app.listen(PORT, () => {

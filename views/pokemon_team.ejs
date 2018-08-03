@@ -1,4 +1,11 @@
+<%- include('partials/header') %>
 
-<form action="/pokemon/<%= pokemon.id %>?_method=Delete" method="POST">
-    <input type="Submit" value="Delete"/>
-  </form>
+
+<form action="pokemon_team" method="get">
+  <h1>Here's your team</h1>
+  <% data.forEach(pokemon_team => { %>
+    <%=pokemon_team.pokemon_name%>
+    <%=pokemon_team.pokemon_description%>
+    <% }) %>
+  
+</form>

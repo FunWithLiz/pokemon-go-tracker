@@ -2,14 +2,14 @@ const db = require('../models/pokemon');
 
 module.exports = {
     createNewPokemon(req, res, next){
-        console.log(req.users);
         db.save({...req.body, users_id: 1})
         .then((pokemon)=>{
-            res.redirect('/pokemon')
+            // res.redirect('/pokemon')
         })
         .catch(e => next(e));
     },
 
+   
 
     showAllPokemon(req, res, next){
         db.findAllPokemon()
@@ -20,20 +20,21 @@ module.exports = {
         .catch(e => next(e));
     },
 
-    getOnePokemon(req, res, next){
-        db.findById(req.params.id)
-        .then((pokemon)=>{
-            res.locals.data = pokemon;
+   
+
+    showPokemonTeam(req, res, next){
+        db.findPokemonTeam()
+        .then((pokemonteam)=>{
+            res.locals.data=pokemonteam;
             next();
         })
-        .catch(next);
+        .catch(e => next(e));
     },
 
     addPokemon(req, res, next){
-        const { name, description } = req.body;
-        db.save({ name, description })
-        .then((newPokemon) => {
-            res.locals.data = newPokemon;
+        db.saveTeam(req.body)
+        .then(() => {
+            res.redirect('/pokemon/pokemon_team');
             next();
         })
         .catch(e => next(e));

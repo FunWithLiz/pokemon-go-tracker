@@ -5,22 +5,23 @@ const viewsController = require('../controllers/viewsController');
 
 const pokemonRouter = express.Router();
 
-pokemonRouter.get('/:id/edit',);
 pokemonRouter.get('/new', (req, res)=>{
-    res.render('pokemon/addPokemon');
+    res.render('createNew_pokemon')
 });
 
 pokemonRouter.route('/:id')
-    .get(pokemonController.getOnePokemon)
+
     .put(pokemonController.updatePokemon)
     .delete(pokemonController.destroy, (req, res)=>{
         res.sendStatus(200);
     });
 
-pokemonRouter.route('/')
-    .post(pokemonController.createNewPokemon)
-    .get(pokemonController.showAllPokemon, viewsController.showAll, viewsController.showAllPokemon);
+pokemonRouter.route('/pokemon_team')
+.get(pokemonController.showPokemonTeam, viewsController.showPokemonTeam)
+.post(pokemonController.addPokemon, viewsController.showPokemonTeam);
 
+pokemonRouter.route('/')
+.get(pokemonController.showAllPokemon, viewsController.showAllPokemon)
 
 
 module.exports = pokemonRouter;

@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS pokemon_types;
 DROP TABLE IF EXISTS pokemon;
 DROP TABLE IF EXISTS types;
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS pokemon_team;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
@@ -37,3 +38,9 @@ CREATE TABLE pokemon_types(
     pokemon_id INTEGER REFERENCES pokemon (id) ON DELETE CASCADE,
     type_id INTEGER REFERENCES types (id) ON DELETE CASCADE
 );
+
+CREATE TABLE pokemon_team(
+    id SERIAL PRIMARY KEY,
+    pokemon_name VARCHAR(255),
+    pokemon_description VARCHAR(1024)
+)

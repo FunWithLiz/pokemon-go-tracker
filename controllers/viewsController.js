@@ -2,18 +2,6 @@
 
 module.exports = {
 
-showAll(req, res){
-    res.format({
-        html(){
-            res.render('pokemon_body');
-        },
-
-        json(){
-            res.json(res.locals.data);
-        },
-    });
-
-},
 
 showAllPokemon(req, res){
     res.format({
@@ -21,6 +9,28 @@ showAllPokemon(req, res){
             res.render('showAll_pokemon');
         },
 
+        json(){
+            res.json(res.locals.data);
+        }
+    });
+},
+
+showPokemonTeam(req, res){
+    res.format({
+        html(){
+            res.render('pokemon_team');
+        },
+        json(){
+            res.json(res.locals.data);
+        }
+    });
+},
+
+createNewPokemon(req, res){
+    res.format({
+        html(){
+            res.render('createNew_pokemon');
+        },
         json(){
             res.json(res.locals.data);
         }
