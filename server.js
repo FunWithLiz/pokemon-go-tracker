@@ -17,8 +17,9 @@ const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
 // require('./config/passport');
-app.use(methodOverride('__method'));
+app.use(methodOverride('_method'));
 app.use(logger('dev'));
 
 app.use(bodyParser.urlencoded({ extended: false}));

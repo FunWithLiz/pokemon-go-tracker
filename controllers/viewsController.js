@@ -39,7 +39,7 @@ createNewPokemon(req, res){
 
 
 handleDelete(req, res){
-    res.redirect('/pokemon');
-},
+    res.redirect('/pokemon/pokemon_team');
+}
 
 }

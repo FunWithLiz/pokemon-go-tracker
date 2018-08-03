@@ -36,7 +36,7 @@ module.exports = {
 
     destroy(id){
         return db.none(`
-        DELETE FROM pokemon
+        DELETE FROM pokemon_team
         WHERE id = $1
         `, id);
     },

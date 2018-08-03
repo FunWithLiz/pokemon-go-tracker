@@ -21,7 +21,6 @@ module.exports = {
     },
 
    
-
     showPokemonTeam(req, res, next){
         db.findPokemonTeam()
         .then((pokemonteam)=>{
@@ -32,9 +31,11 @@ module.exports = {
     },
 
     addPokemon(req, res, next){
+        
         db.saveTeam(req.body)
         .then(() => {
-            res.redirect('/pokemon/pokemon_team');
+
+            res.redirect("/pokemon/pokemon_team/");
             next();
         })
         .catch(e => next(e));
@@ -57,6 +58,7 @@ module.exports = {
     },
 
     destroy(req, res, next){
+        console.log(req);
         db.destroy(req.params.id)
         .then(()=>{
             next();
