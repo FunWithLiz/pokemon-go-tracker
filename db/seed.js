@@ -17,9 +17,9 @@ function loopPokemon(){
     return fetch('https://pokeapi.co/api/v2/pokemon-species/?limit=151')
     .then(checkOK)
     .then(data => {
-        // console.log(data.results)
+        console.log(data.results)
         for(let i = 0; i < data.results.length; i+=1){
-            pokemon.save(data.results[i]);
+            pokemon.saveTheInfo(data.results[i]);
         }
     })
 }

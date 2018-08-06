@@ -14,7 +14,7 @@ module.exports = {
         FROM pokemon_team`)
     },
 
-    
+
 
     findOne(pokemon){
         return db.one(`
@@ -24,6 +24,13 @@ module.exports = {
         `, pokemon);
     },
 
+    saveTheInfo(pokemon){
+        return db.one(`
+        INSERT INTO pokemon_db (name, url)
+        VALUES ($/name/, $/url/)
+        RETURNING *
+        `, pokemon);
+    },
 
     saveTeam(pokemon_team){
         debugger;

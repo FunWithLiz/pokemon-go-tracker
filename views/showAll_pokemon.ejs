@@ -5,7 +5,9 @@
 <div class="showAllPokemon">
     <form action="/pokemon" method="get">
         <% data.forEach(pokemon => {%>
+            <%=pokemon.id%>
             <%=pokemon.name%>
+            <%=pokemon.description%>
             <br>
             <%})%>
         
