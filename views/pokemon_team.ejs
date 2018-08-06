@@ -1,18 +1,42 @@
 <%- include('partials/header') %>
 
+<h4><a href="/">Homepage</a></h4>
 
 <h1>Here's your team</h1>
 <% data.forEach(pokemon_team => { %>
   <%=pokemon_team.id%>
   <%=pokemon_team.pokemon_name%>
   <%=pokemon_team.pokemon_description%>
-  
+
   <form 
   method="POST"
   action="/pokemon/<%=pokemon_team.id %>?_method=DELETE" 
     >
     <button type="submit">Delete</button>
   </form>
-  <% }) %>
+  
 
+  <form 
+  method="POST"
+  action="/pokemon/<%=pokemon_team.id %>?_method=PUT">
+          <h3>Edit Pokemon Team</h3>
+      <label for="name">
+        Pokemon:
+        <input type="text" name="name">
+      </label>
+      <label for="description">
+        Description:
+        <textarea type="description" name="description">
+            </textarea>
+      </label>
+      
+      <br>
+        <br />
+  <input class="updateBut" type="submit" value="Update Pokemon" />
+  </form>
+
+  <div class="spaceBetween"></div>
+  
+  <% }) %>
+  
 

@@ -2,10 +2,10 @@ const db = require('../config/conn');
 
 module.exports = {
     findAllPokemon(){
-        console.log('Im in the model!');
         return db.many(`
         SELECT *
-        FROM pokemon`)
+        FROM pokemon 
+        ORDER BY id ASC`)
     },
 
     findPokemonTeam(){
@@ -16,11 +16,11 @@ module.exports = {
 
     
 
-    save(pokemon){
+    findOne(pokemon){
         return db.one(`
-        INSERT INTO pokemon (name)
-        VALUES ($/name/)
-        RETURNING *
+        SELECT *
+        FROM pokemon_team
+        WHERE pokemon_team.id = $1
         `, pokemon);
     },
 
@@ -49,6 +49,14 @@ module.exports = {
         `, [pokemonName, type]);
     },
 
-
+    updatePokemon(id, pokemon){
+        return db.one(`
+        UPDATE pokemon_team
+        SET pokemon_name = $2,
+            pokemon_description = $3
+        WHERE id = $1
+        RETURNING *
+        `, [id, pokemon.name, pokemon.description]);
+    },
 
 };

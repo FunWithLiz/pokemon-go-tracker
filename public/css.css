@@ -1,0 +1,67 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+h4 {
+    display: absolute;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+button {
+    margin-top: 10px;
+    border: solid black 2px;
+    font-family: 'lato', sans-serif;
+    font-size: 15px;
+
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+label {
+    font-family: 'lato', sans-serif;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.boldName {
+    font-weight: 18px;
+}
+
+body {
+    text-align: center;
+}
+
+.spaceBetween {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: solid grey 1px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.updateBut {
+    border: solid black 2px;
+    font-family: 'lato', sans-serif;
+    font-size: 15px;
+}
+
+.showAllPokemon {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}

@@ -41,19 +41,21 @@ module.exports = {
         .catch(e => next(e));
     },
 
-    updatePokemon(req, res, next){
-        const { name, description } = req.body;
-        const modifiedPokemon = {
-            id: req.params.id,
-            name,
-            description,
-        };
-
-        db.update(modifiedPokemon)
-        .then((pokemon)=>{
-            res.locals.data = pokemon;
+    findOnePokemon(req, res, next){
+        const { id } = req.params;
+        db.findOne(id)
+        .then((pokemon) =>{
+            res.locals.pokemon = pokemon;
             next();
         })
+        .catch(e => next(e));
+    },
+
+    updatePokemon(req, res, next){
+        const { id } = req.params;
+        const pokemon = req.body;
+        db.updatePokemon(id, pokemon) 
+        .then(()=> next())
         .catch(e => next(e));
     },
 
