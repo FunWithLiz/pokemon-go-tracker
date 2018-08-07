@@ -1,154 +1,156 @@
+-- hard coded data because the pokeAPI kept giving me 504s
+
 \c pokemon_db;
 
 INSERT INTO pokemon (name, description)
 VALUES
 (   
-    'Bulbasaur',
+    'Bulbasaur:',
     'A strange seed was planted on its back at birth. 
     The plant sprouts and grows with this POKéMON'
 ),
 
 (
-    'Ivysaur',
+    'Ivysaur:',
     'When the bulb on its back grows large, it appears to 
     lose the ability to stand on its hind legs.'
 ),
 
 (
-    'Venusaur',
+    'Venusaur:',
     'The plant blooms when it is absorbing solar energy. 
     It stays on the move to seek sunlight.'
 ),
 
 (
-    'Charmander',
+    'Charmander:',
     'Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.'
 ),
 
 (
-    'Charmeleon',
+    'Charmeleon:',
     'When it swings its burning tail, it elevates the temperature to unbearably high levels.'
 ),
 
 (
-    'Charizard',
+    'Charizard:',
     'Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.'
 ),
 
 (
-    'Squirtle',
+    'Squirtle:',
     'After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.'
 ),
 
 (
-    'Wartortle',
+    'Wartortle:',
     'Often hides in water to stalk unwary prey. For swimming fast, 
     it moves its ears to maintain balance.'
 ),
 
 (
-    'Blastoise',
+    'Blastoise:',
     'Once it takes aim at its enemy, it blasts out water with even more force than a fire hose.'
 ),
 
 (
-    'Caterpie',
+    'Caterpie:',
     'Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.'
 ),
 
 (
-    'Metapod',
+    'Metapod:',
     'This POKéMON is vulnerable to attack while its shell is soft, exposing its weak and tender body.'
 ),
 
 (
-    'Butterfree',
+    'Butterfree:',
     'In battle, it flaps its wings at high speed to release highly toxic dust into the air.'
 ),
 
 (
-    'Weedle',
+    'Weedle:',
     'Often found in forests, eating leaves. It has a sharp venomous stinger on its head.'
 ),
 
 (
-    'Kakuna',
+    'Kakuna:',
     'Almost incapable of moving, this POKéMON can only harden its shell to 
     protect itself from predators.'
 ),
 
 (
-    'Beedrill',
+    'Beedrill:',
     'Flies at high speed and attacks using its large venomous stingers on its forelegs and tail.'
 ),
 
 (
-    'Pidgey',
+    'Pidgey:',
     'A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.'
 ),
 
 (
-    'Pidgeotto',
+    'Pidgeotto:',
     'Very protective of its sprawling territorial area, this POKéMON will fiercely peck at any intruder.'
 ),
 
 (
-    'Pidgeot',
+    'Pidgeot:',
     'When hunting, it skims the surface of water at high speed to pick off unwary prey such as MAGIKARP.'
 ),
 
 (
-    'Rattata',
+    'Rattata:',
     'Bites anything when it attacks. Small and very quick, it is a common sight in many places.'
 ),
 
 (
-    'Raticate',
+    'Raticate:',
     'It uses its whiskers to maintain its balance. It apparently slows down if they are cut off.'
 ),
 
 (
-    'Spearow',
+    'Spearow:',
     'Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.'
 ),
 
 (
-    'Fearow',
+    'Fearow:',
     'With its huge and magnificent wings, it can keep aloft without ever having to land for rest.'
 ),
 
 (
-    'Ekans',
+    'Ekans:',
     'Moves silently and stealthily. Eats the eggs of birds, such as PIDGEY and SPEAROW, whole.'
 ),
 
 (
-    'Arbok',
+    'Arbok:',
     'It is rumored that the ferocious warning markings on its belly differ from area to area.'
 ),
 
 (
-    'Pikachu',
+    'Pikachu:',
     'When several of these POKéMON gather, their electricity could build and cause lightning storms.'
 ),
 
 (
-    'Raichu',
+    'Raichu:',
     'Its long tail serves as a ground to protect itself from its own high voltage power.'
 ),
 
 (
-    'Sandshrew',
+    'Sandshrew:',
     'Burrows deep underground in arid locations far from water. It only emerges to hunt for food.'
 ),
 
 (
-    'Sandslash',
+    'Sandslash:',
     'Curls up into a spiny ball when threatened. It can roll while curled up to attack or escape.'
 ),
 
 (
-    'Nidoran♀',
+    'Nidoran♀:',
     'Although small, its venomous barbs render this POKéMON dangerous. The female has smaller horns.'
 ),
 
@@ -579,186 +581,186 @@ VALUES
 ),
 
 (
-    'Kangaskhan',
+    'Kangaskhan:',
     'The infant rarely ventures out of its mothers protective pouch until it is 3 years old.'
 ),
 
 (
-    'Horsea',
+    'Horsea:',
     'Known to shoot down flying bugs with precision blasts of ink from the surface of the water.'
 ),
 
 (
-    'Seadra',
+    'Seadra:',
     'Capable of swimming backwards by rapidly flapping its wing-like pectoral fins and stout tail.'
 ),
 
 (
-    'Goldeen',
+    'Goldeen:',
     'Its tail fin billows like an elegant ballroom dress, giving it the nickname of the Water Queen.'
 ),
 
 (
-    'Seaking',
+    'Seaking:',
     'In the autumn spawning season, they can be seen swimming powerfully up rivers and creeks.'
 ),
 
 (
-    'Staryu',
+    'Staryu:',
     'An enigmatic POKéMON that can effortlessly regenerate any appendage it loses in battle.'
 ),
 
 (
-    'Starmie',
+    'Starmie:',
     'Its central core glows with the seven colors of the rainbow. Some people value the core as a gem.'
 ),
 
 (
-    'Mr. Mime',
+    'Mr. Mime:',
     'If interrupted while it is miming, it will slap around the offender with its broad hands.'
 ),
 
 (
-    'Scyther',
+    'Scyther:',
     'With ninja-like agility and speed, it can create the illusion that there is more than one.'
 ),
 
 (
-    'Jynx',
+    'Jynx:',
     'It seductively wiggles its hips as it walks. It can cause people to dance in unison with it.'
 ),
 
 (
-    'Electabuzz',
+    'Electabuzz:',
     'Normally found near power plants, they can wander away and cause major blackouts in cities.'
 ),
 
 (
-    'Magmar',
+    'Magmar:',
     'Its body always burns with an orange glow that enables it to hide perfectly among flames.'
 ),
 
 (
-    'Pinsir',
+    'Pinsir:',
     'If it fails to crush the victim in its pincers, it will swing it around and toss it hard.'
 ),
 
 (
-    'Tauros',
+    'Tauros:',
     'When it targets an enemy, it charges furiously while whipping its body with its long tails.'
 ),
 
 (
-    'Magikarp',
+    'Magikarp:',
     'In the distant past, it was somewhat stronger than the horribly weak descendants that exist today.'
 ),
 
 (
-    'Gyarados',
+    'Gyarados:',
     'Rarely seen in the wild. Huge and vicious, it is capable of destroying entire cities in a rage.'
 ),
 
 (
-    'Lapras',
+    'Lapras:',
     'A POKéMON that has been overhunted almost to extinction. It can ferry people across the water.'
 ),
 
 (
-    'Ditto',
+    'Ditto:',
     'Capable of copying an enemys genetic code to instantly transform itself into a duplicate of the enemy.'
 ),
 
 (
-    'Eevee',
+    'Eevee:',
     'Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.'
 ),
 
 (
-    'Vaporeon',
+    'Vaporeon:',
     'Lives close to water. Its long tail is ridged with a fin which is often mistaken for a mermaids.'
 ),
 
 (
-    'Jolteon',
+    'Jolteon:',
     'It accumulates negative ions in the atmosphere to blast out 10000-volt lightning bolts.'
 ),
 
 (
-    'Flareon',
+    'Flareon:',
     'When storing thermal energy in its body, its temperature could soar to over 1600 degrees.'
 ),
 
 (
-    'Porygon',
+    'Porygon:',
     'A POKéMON that consists entirely of programming code. Capable of moving freely in cyberspace.'
 ),
 
 (
-    'Omanyte',
+    'Omanyte:',
     'Although long extinct, in rare cases, it can be genetically resurrected from fossils.'
 ),
 
 (
-    'Omastar',
+    'Omastar:',
     'A prehistoric POKéMON that died out when its heavy shell made it impossible to catch prey.'
 ),
 
 (
-    'Kabuto',
+    'Kabuto:',
     'A POKéMON that was resurrected from a fossil found in what was once the ocean floor eons ago.'
 ),
 
 (
-    'Kabutops',
+    'Kabutops:',
     'Its sleek shape is perfect for swimming. It slashes prey with its claws and drains the body fluids.'
 ),
 
 (
-    'Aerodactyl',
+    'Aerodactyl:',
     'A ferocious, prehistoric POKéMON that goes for the enemys throat with its serrated saw-like fangs.'
 ),
 
 (
-    'Snorlax',
+    'Snorlax:',
     'Very lazy. Just eats and sleeps. As its rotund bulk builds, it becomes steadily more slothful.'
 ),
 
 (
-    'Articuno',
+    'Articuno:',
     'A legendary bird POKéMON that is said to appear to doomed people who are lost in icy mountains.'
 ),
 
 (
-    'Zapdos',
+    'Zapdos:',
     'A legendary bird POKéMON that is said to appear from clouds while dropping enormous lightning bolts.'
 ),
 
 (
-    'Moltres',
+    'Moltres:',
     'Known as the legendary bird of fire. Every flap of its wings creates a dazzling flash of flames.'
 ),
 
 (
-    'Dratini',
+    'Dratini:',
     'Long considered a mythical POKéMON until recently when a small colony was found living underwater.'
 ),
 
 (
-    'Dragonair',
+    'Dragonair:',
     'A mystical POKéMON that exudes a gentle aura. Has the ability to change climate conditions.'
 ),
 
 (
-    'Dragonite',
+    'Dragonite:',
     'An extremely rarely seen marine POKéMON. Its intelligence is said to match that of humans.'
 ),
 
 (
-    'Mewtwo',
+    'Mewtwo:',
     'It was created by a scientist after years of horrific gene splicing and DNA engineering experiments.'
 ),
 
 (
-    'Mew',
+    'Mew:',
     'So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.'    
 )

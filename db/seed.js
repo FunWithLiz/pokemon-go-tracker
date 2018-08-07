@@ -1,6 +1,9 @@
 
 
 // @author: Bo --helped with my loopPokemon function
+//API source: https://pokeapi.co/
+//=> I was not able to have access to this API as it has recently given me
+// several 504s, I created and hard coded a seed.sql instead.
 
 const pokemon = require('../models/Pokemon.js');
 const fetch = require('node-fetch');

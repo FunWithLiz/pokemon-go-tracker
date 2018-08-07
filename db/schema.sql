@@ -1,3 +1,5 @@
+-- drop tables if they exists and create the tables for users, pokemon and pokemon_team
+
 DROP TABLE IF EXISTS pokemon_types;
 DROP TABLE IF EXISTS pokemon;
 DROP TABLE IF EXISTS types;
@@ -28,6 +30,12 @@ CREATE TABLE pokemon(
 CREATE INDEX ON pokemon (name);
 CREATE INDEX ON pokemon (date_created);
 
+
+-- unfortunately the types and pokemon_types are obsolete, I did not have a chance to
+-- use these tables at all. The reason why these are still here is because whenever
+-- I delete them, my seed file would not work so therefore, I will leave it here 
+-- so that it will not interfere with my seed file
+
 CREATE TABLE types(
     id SERIAL PRIMARY KEY,
     type VARCHAR(255)
@@ -38,6 +46,8 @@ CREATE TABLE pokemon_types(
     pokemon_id INTEGER REFERENCES pokemon (id) ON DELETE CASCADE,
     type_id INTEGER REFERENCES types (id) ON DELETE CASCADE
 );
+
+
 
 CREATE TABLE pokemon_team(
     id SERIAL PRIMARY KEY,

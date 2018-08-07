@@ -1,3 +1,5 @@
+// models' functions will be needed for the controller
+
 const db = require('../config/conn');
 
 module.exports = {

@@ -1,10 +1,11 @@
+//models is connected so that CRUD will work
+
 const db = require('../models/pokemon');
 
 module.exports = {
     createNewPokemon(req, res, next){
         db.save({...req.body, users_id: 1})
         .then((pokemon)=>{
-            // res.redirect('/pokemon')
         })
         .catch(e => next(e));
     },
