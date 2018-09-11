@@ -1,6 +1,6 @@
 -- hard coded data because the pokeAPI kept giving me 504s
 
-\c pokemon_db;
+
 
 INSERT INTO pokemon (name, description)
 VALUES
