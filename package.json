@@ -1,11 +1,12 @@
 {
   "name": "pokemon-go-tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "The primary goal for the Pokemon-Go-Tracker is to track the Pokemon you already have and build teams using the Pokemon you caught or would like to catch and use in your team.",
   "main": "conn.js",
   "scripts": {
     "dev": "nodemon server.js -e js,css,html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -21,11 +22,20 @@
     "nodemon": "^1.18.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "pg": "^7.4.3",
     "pg-promise": "^8.4.5"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FunWithLiz/pokemon-go-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FunWithLiz/pokemon-go-tracker/issues"
+  },
+  "homepage": "https://github.com/FunWithLiz/pokemon-go-tracker#readme"
 }
