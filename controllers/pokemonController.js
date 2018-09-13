@@ -1,6 +1,6 @@
 //models is connected so that CRUD will work
 
-const db = require('../models/pokemon');
+const db = require('../models/Pokemon');
 
 module.exports = {
     createNewPokemon(req, res, next){
