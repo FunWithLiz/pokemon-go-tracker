@@ -11,7 +11,7 @@ const pokemonRouter = require('./routes/pokemonRouter');
 const app = express();
 
 //setup PORT
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.static(__dirname + '/public'));
 
